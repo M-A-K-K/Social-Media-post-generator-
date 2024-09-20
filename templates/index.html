@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media Post Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Social Media Post Generator</h1>
+    <form method="POST">
+        <label for="company_name">Company Name:</label>
+        <input type="text" id="company_name" name="company_name" required><br>
+
+        <label for="industry">Industry:</label>
+        <input type="text" id="industry" name="industry" required><br>
+
+        <label for="partner">Partner Name:</label>
+        <input type="text" id="partner" name="partner" required><br>
+
+        <label for="region">Region (APMEA, etc.):</label>
+        <input type="text" id="region" name="region" required><br>
+
+        <label for="achievement_1">Achievement 1:</label>
+        <input type="text" id="achievement_1" name="achievement_1" required><br>
+
+        <label for="achievement_2">Achievement 2:</label>
+        <input type="text" id="achievement_2" name="achievement_2" required><br>
+
+        <label for="achievement_3">Achievement 3:</label>
+        <input type="text" id="achievement_3" name="achievement_3" required><br>
+
+        <label for="achievement_4">Achievement 4:</label>
+        <input type="text" id="achievement_4" name="achievement_4" required><br>
+
+        <label for="achievement_5">Achievement 5:</label>
+        <input type="text" id="achievement_5" name="achievement_5" required><br>
+
+        <label for="testimonial">Testimonial (Person Name):</label>
+        <input type="text" id="testimonial" name="testimonial" required><br>
+
+        <label for="link">Link:</label>
+        <input type="text" id="link" name="link" required><br>
+
+        <input type="submit" value="Generate Post">
+    </form>
+
+    {% if post %}
+    <h2>Generated Social Media Post</h2>
+    <div class="post-output">
+        <pre>{{ post }}</pre>
+    </div>
+    {% endif %}
+</body>
+</html>
