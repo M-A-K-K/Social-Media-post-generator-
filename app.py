@@ -73,7 +73,6 @@ def index():
                 "testimonial": request.form["testimonial"],
                 "link": request.form["link"],
             }
-
             post = generate_social_media_post(answers)
 
             return render_template("index.html", post=post)
